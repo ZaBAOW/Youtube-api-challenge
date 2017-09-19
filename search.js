@@ -9,6 +9,7 @@ function search() {
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet'
+    key: 'AIzaSyADDAnPK96vUAIv8F3adfmikp-5uZzKNA4'
   });
 
   request.execute(function(response) {
