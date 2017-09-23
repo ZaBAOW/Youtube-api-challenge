@@ -15,7 +15,7 @@ function search() {
 
   request.execute(function(response) {
     console.log(response.result);
-    var str = JSON.stringify(response.result.snippet.thumbnails.medium.url);
+    var str = JSON.stringify(response.result.items[0].snippet.thumbnails.medium.url);
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
