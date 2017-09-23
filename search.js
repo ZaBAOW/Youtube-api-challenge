@@ -14,7 +14,7 @@ function search() {
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
-    console.log(str);
+    console.log(str.items);
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
