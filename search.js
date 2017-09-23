@@ -8,12 +8,13 @@ function search() {
   var q = $('#query').val();
   var request = gapi.client.youtube.search.list({
     q: q,
-    part: 'items.snippet.medium.url',
+    part: 'snippet',
     key: 'AIzaSyADDAnPK96vUAIv8F3adfmikp-5uZzKNA4'
   });
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
+    console.log(str);
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
