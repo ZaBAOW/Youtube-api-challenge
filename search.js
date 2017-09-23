@@ -11,10 +11,10 @@ function search() {
     part: 'snippet',
     key: 'AIzaSyADDAnPK96vUAIv8F3adfmikp-5uZzKNA4'
   });
+  console.log(request);
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
-    console.log(str.items);
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
