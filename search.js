@@ -8,7 +8,7 @@ function search() {
   var q = $('#query').val();
   var request = gapi.client.youtube.search.list({
     q: q,
-    part: snippet.thumbnail.medium.url,
+    part: 'snippet',
     key: 'AIzaSyADDAnPK96vUAIv8F3adfmikp-5uZzKNA4'
   });
 
