@@ -21,7 +21,7 @@ function search() {
   });
 }
 
-function goToVideo(){
+function goToVideo(response){
   var video_id = JSON.stringify(response.result.items[0].id);
   console.log("function works");
 }
