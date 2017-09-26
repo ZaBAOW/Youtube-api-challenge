@@ -17,11 +17,12 @@ function search() {
     console.log(response.result);
     var str = JSON.stringify(response.result.items[0].snippet.thumbnails.medium.url);
     $('#search-container').html('<pre>' + str + '</pre>');
-    $('#search-container').html('<img src='+ str + ' onclick= "goToVideo(response)"' + '>' + '</img>');
+    $('#search-container').html('<img src='+ str + '>' + '</img>');
+    // $('#search-container').html('<img src='+ str + ' onclick= "goToVideo(response)"' + '>' + '</img>');
   });
 }
 
-function goToVideo(response){
-  var video_id = JSON.stringify(response.result.items[0].id);
-  console.log("function works");
-}
+// function goToVideo(response){
+//   var video_id = JSON.stringify(response.result.items[0].id);
+//   console.log("function works");
+// }
