@@ -16,8 +16,9 @@ function search() {
   request.execute(function(response) {
     console.log(response.result);
     var str = JSON.stringify(response.result.items[0].snippet.thumbnails.medium.url);
+    var video_title = JSON.stringify(response.result.items[0].snippet.title);
     $('#search-container').html('<pre>' + str + '</pre>');
-    $('#search-container').html('<img src='+ str + '>' + '</img>');
+    $('#search-container').html('<img title=' + video_title + ' src='+ str + '>' + '</img>');
     // $('#search-container').html('<img src='+ str + ' onclick= "goToVideo(response)"' + '>' + '</img>');
   });
 }
