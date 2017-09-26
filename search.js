@@ -22,5 +22,6 @@ function search() {
 }
 
 function goToVideo(){
+  var video_id = JSON.stringify(response.result.items[0].id);
   console.log("function works");
 }
